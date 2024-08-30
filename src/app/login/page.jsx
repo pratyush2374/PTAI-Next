@@ -29,7 +29,7 @@ const Login = () => {
                                 className={styles.password}
                             />
 
-                            <Link href="/dashboard"><button type="submit">Login</button></Link>
+                            <Link href="/userInput"><button type="submit">Login</button></Link>
                         </form>
                         <p>
                             Don't have an account? <Link href="/sign-up">Sign Up</Link>
