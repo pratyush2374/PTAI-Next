@@ -1,0 +1,24 @@
+/* TomorrowGroceryList.module.css */
+
+.tomorrowGroceryList {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  width: 50%; /* Each section takes up 50% width */
+  box-sizing: border-box;
+}
+
+.tomorrowGroceryList h3 {
+  margin-top: 0;
+}
+
+.tomorrowGroceryList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tomorrowGroceryList ul li {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,236 @@
+/* DailyMealOverview.module.css */
+
+.mealOptions {
+  display: flex;
+  gap: 8vw;
+  justify-content: center;
+  margin: 2vh 0;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Ensure buttons stay in one line */
+}
+
+.mealButton {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block; /* Changed from flex to inline-block */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 20vw;
+  height: 40vh;
+  vertical-align: top; /* Align buttons properly in one line */
+}
+
+.mealButton:hover {
+  transform: scale(1.05);
+}
+
+.mealImage {
+  width: 100%;
+  height: 70%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.mealName {
+  font-size: x-large;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.initialMessage {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: xx-large;
+}
+
+.toggleContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toggleButton {
+  background-color: #00adb5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.toggleButton:hover {
+  background-color: #007a7a;
+}
+
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 3vh 3vw;
+  flex-wrap: wrap;
+}
+
+.detailsSection {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s;
+  display: flex;
+  gap: 3vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.detailsSection.active {
+  opacity: 1;
+}
+
+.detailsSection.inactive {
+  opacity: 0.3;
+}
+
+@media (max-width: 1024px) {
+  .mealOptions {
+    gap: 4vw;
+  }
+  .mealButton {
+    width: 30vw;
+    height: 30vh;
+  }
+
+  .mealImage {
+    height: 86%;
+  }
+}
+
+@media (max-width: 770px) {
+  .mealOptions {
+    gap: 4vw;
+  }
+  .mealButton {
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .mealImage {
+    height: 86%;
+  }
+
+  .toggleContainer {
+    text-align: center;
+  }
+
+  .toggleButton {
+    max-width: 100vw;
+  }
+
+  .detailsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mealButton {
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .mealImage {
+    height: 50%;
+  }
+}
+
+/* Additional CSS for MealInfo */
+
+.heading h2 {
+  text-align: center;
+  margin: 3vh 0;
+  font-size: xx-large;
+}
+
+.mealInfo {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 17vw;
+  overflow: hidden;
+  max-width: 100vw;
+  margin: 0 5vw;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.chartContainer {
+  width: 25vw; /* Adjust width as needed */
+  height: 25vh; /* Adjust height as needed */
+  position: relative;
+}
+
+.mealInfo h3 {
+  margin: 10px 0 10px;
+}
+
+.mealInfo ul {
+  list-style: none;
+  padding: 0;
+  margin: 2vh 0;
+}
+
+.mealInfo ul li {
+  margin-bottom: 5vh;
+  font-size: x-large;
+}
+
+.mealInfo p {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .mealInfo {
+    gap: 3vw;
+  }
+
+  .chartContainer {
+    width: 30vw;
+    height: 20vh;
+  }
+}
+
+@media (max-width: 770px) {
+  .mealInfo {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 1vw;
+  }
+
+  .chartContainer {
+    width: 50vw;
+    height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .mealInfo {
+    gap: 5vw;
+  }
+
+  .chartContainer {
+    width: 80vw;
+    height: 30vh;
+  }
+}
