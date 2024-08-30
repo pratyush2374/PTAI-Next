@@ -1,0 +1,1157 @@
+.body {
+    background-color: #f4f4f9;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbarTabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 30px;
+    height: inherit;
+}
+
+.navbarTabs .tab {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    height: 100%;
+}
+
+.navbarTabs .tab:hover {
+    color: #007bff;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+}
+
+.curr {
+    color: #007bff;
+}
+
+#curr {
+    color: #007bff;
+}
+
+
+
+.parent {
+    width: 90%;
+    margin: 120px auto 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+
+
+/* User info tabs  */
+
+.left {
+    width: 100%;
+}
+
+.main {
+    width: 75%;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.welcomeMessage {
+    text-align: left;
+    margin: 30px;
+}
+
+.welcomeMessage .greeting {
+    font-size: 18px;
+    font-weight: 300;
+    color: #6c757d;
+    margin: 0;
+}
+
+.welcomeMessage h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 5px 0;
+    color: #212529;
+}
+
+.dataBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+
+.dataBox {
+    min-width: 150px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 22%;
+}
+
+.boxName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.boxName img {
+    width: 20px;
+    height: 20px;
+}
+
+.dataBox h2 {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6c757d;
+    display: inline-block;
+}
+
+.dataValue {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #212529;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #4caf50;
+    width: 50%;
+}
+
+.chart-container {
+    position: relative;
+    height: 120px;
+}
+
+.water-chart {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartOne {
+    width: 150px;
+}
+
+.unit {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.status {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.filledStatusSteps {
+    height: 100%;
+    background-color: #ff9422;
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s;
+}
+
+.filledStatusCalories {
+    height: 100%;
+    background-color: #5689ff;
+    width: 90%;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s;
+}
+
+.filledStatusWater {
+    height: 100%;
+    background-color: #81fb76;
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s;
+}
+
+.filledStatusSleep {
+    height: 100%;
+    background-color: #ff6d6d;
+    width: 95%;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s;
+}
+
+.emptyStatus {
+    display: none;
+}
+
+/* Right Side section */
+
+.right {
+    background-color: rgb(251, 251, 251);
+    padding: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 25%;
+}
+
+.userInfo {
+    margin-bottom: 30px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.rightUserName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.yrGoals {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.goalsInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.goalsInner img {
+    width: 25px;
+    height: 25px;
+}
+
+.individualGoal {
+    margin-left: 5px;
+    text-align: center;
+}
+
+.individualGoal h1 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.individualGoal h2 {
+    font-size: 10px;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.goalPercentage {
+    font-size: 12px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.rightUnit {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 3px;
+}
+
+.userDetails {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.userDetails>div {
+    text-align: center;
+}
+
+.userDetails h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.userDetails h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+
+/* Today's Plan  */
+
+.todaysPlan {
+    padding: 20px;
+}
+
+.today {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Exercise */
+.exercise {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(85, 134, 255, 1) 100%);
+}
+
+
+.showEx {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.showEx img {
+    width: 40px;
+    height: 40px;
+}
+
+.ex {
+    font-size: 22px;
+    align-self: flex-end;
+}
+
+.exerciseInner {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+}
+
+.individualExercise {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 230px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.individualExercise:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.individualExercise img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.exerciseDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.exerciseDetails h1 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.exerciseDetails h2 {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 400;
+    margin: 0;
+}
+
+.exerciseDetails span {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.goToExercise {
+    display: block;
+    padding: 12px 24px;
+    background-color: #5586ff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+
+}
+
+.goToExercise:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.goToExercise:active {
+    background-color: #004494;
+    transform: translateY(1px);
+}
+
+
+/* Diet Section */
+.diet {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 44, 44, 1) 100%);
+    margin-top: 30px;
+}
+
+.dietLeft {
+    display: flex;
+    align-items: center;
+}
+
+.showDiet {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.showDiet img {
+    width: 40px;
+    height: 40px;
+}
+
+.di {
+    font-size: 22px;
+    align-self: flex-end;
+}
+
+.dietInner {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+}
+
+.individualDiet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.individualDiet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.individualDiet img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.dietDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.dietDetails span {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.dietDetails h1 {
+    font-size: 1em;
+}
+
+.dietDetails h2 {
+    font-size: 0.9em;
+    color: #888;
+    margin: 0;
+    font-weight: 400;
+}
+
+.moreDietDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 10px auto 0px;
+}
+
+.innerDietDetails {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.innerDietDetails h2 {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.innerDietDetails h3 {
+    font-size: 0.7em;
+    color: #888;
+    font-weight: 400;
+}
+
+.goToDiet {
+    display: block;
+    padding: 12px 24px;
+    background-color: #5586ff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.goToDiet:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.goToDiet:active {
+    background-color: #004494;
+    transform: translateY(1px);
+}
+
+
+/* Overall */
+
+.outerOverall {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0px;
+}
+
+.overall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.overallStats {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.overallBox {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    margin-left: 20px;
+    width: 30%;
+}
+
+.totalCalories {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.subOverall {
+    display: flex;
+    flex-direction: column;
+}
+
+.overallBox img {
+    width: 40px;
+    height: 40px;
+}
+
+.totalCalories h2 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.totalCalories h3 {
+    font-size: 0.9em;
+    color: #888;
+    font-weight: 400;
+}
+
+.waterOverall {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.waterOverall h2 {
+    font-size: 18px;
+}
+
+.waterOverall h3 {
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+}
+
+.intakeUnit {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.waterOverallInner {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nutrient {
+    text-align: center;
+}
+
+.allNutrient {
+    display: flex;
+    gap: 30px;
+    width: fit-content;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.nutrient h2 {
+    font-size: 1.2em;
+}
+
+.nutrient h3 {
+    font-size: 1em;
+    color: #007bff;
+    margin: 4px 0;
+}
+
+.waterIntake,
+.supplements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0;
+}
+
+.waterIntake img,
+.supplements img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.waterIntake h2,
+.supplements h2 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.waterIntake h3,
+.supplements h3 {
+    font-size: 1em;
+    color: #888;
+    margin: 5px 0;
+}
+
+.extraOverall {
+    width: 40%;
+}
+
+.overallStats {
+    font-size: 22px;
+    align-self: flex-end;
+}
+
+
+/* Weight graph section */
+
+.lowerParent {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+    width: 90%;
+    background-color: #f1f3f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.otherStats {
+    display: flex;
+    gap: 15px;
+}
+
+.weightSection {
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 40%;
+    height: fit-content;
+}
+
+.weightHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weightH1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.weightH1 span {
+    color: #888;
+    font-weight: 500;
+}
+
+.addWeight {
+    font-size: 2.5rem;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.weightDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weightIndividual {
+    text-align: center;
+    width: 15%;
+}
+
+.weightIndividual h3 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.weightIndividual h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    color: #007bff;
+}
+
+.weightGraph {
+    width: 100%;
+    height: 220px;
+}
+
+/* All stats Section */
+
+.allStats {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    padding: 20px;
+}
+
+.allStatsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f7f9fc;
+}
+
+.individualStats {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 180px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.individualStats:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.individualStats img {
+    width: 40px;
+    height: 40px;
+}
+
+.allStatsHeading h1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.indiStats {
+    margin-left: 10px;
+}
+
+.indiStats h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.indiStats h2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Footer section  */
+
+.footer {
+    background-color: #f1f3f5;
+    color: #000000;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.footerLogo img {
+    margin-right: 10px;
+}
+
+.footerLinks {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footerLinks h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.footerLinks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerLinks ul li {
+    margin-bottom: 5px;
+}
+
+.footerLinks ul li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.footerLinks ul li a:hover {
+    color: #007bff;
+}
+
+.footerSocial {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footerSocial h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.footerSocial ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footerSocial ul li {
+    margin-bottom: 5px;
+}
+
+.footerSocial ul li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.footerSocial ul li a img {
+    width: 100%;
+    height: 100%;
+}
+
+.footerBottom {
+    margin-top: 20px;
+    border-top: 1px solid #393E46;
+    padding-top: 10px;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.footerBottom p {
+    font-size: 14px;
+    color: #000000;
+}
+
+
+/* Mobile  CSS */
+/* Mobile friendly styles */
+
+@media (max-width: 768px) {
+    .navbarTabs {
+        /* flex-direction: column; */
+        gap: 25px;
+    }
+
+    .parent {
+        flex-direction: column;
+        margin: 80px auto 20px;
+    }
+
+    .main {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .right {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .dataBox {
+        width: 45%;
+    }
+
+    .exerciseInner,
+    .dietInner,
+    .overall {
+        flex-direction: column;
+    }
+
+    .individualExercise,
+    .individualDiet,
+    .overallBox {
+        width: 80%;
+    }
+
+    .overallBox {
+        margin-left: 0;
+    }
+
+    .otherStats {
+        flex-direction: column;
+    }
+
+    .weightSection {
+        width: 100%;
+    }
+
+    .weightIndividual h3 {
+        font-size: 12px;
+    }
+
+    .weightIndividual h2 {
+        font-size: 20px;
+    }
+
+    .weightIndividual {
+        align-self: flex-end;
+    }
+
+    .allStats {
+        width: 100%;
+    }
+
+    .individualStats {
+        width: 120px;
+    }
+
+    .individualStats img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .indiStats h1 {
+        font-size: 14px;
+    }
+
+    .indiStats h2 {
+        font-size: 10px;
+    }
+
+    .allStatsSection {
+        justify-content: center;
+    }
+
+    .outerOverall {
+        background-color: #f8f9fa;
+        box-shadow: none;
+    }
+
+    .allNutrient {
+        flex-direction: column;
+    }
+
+    .overallBox {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .individualDiet {
+        width: 100%;
+    }
+
+    .dietDetails {
+        margin-bottom: 20px;
+    }
+
+    .individualExercise {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+
+.nextLink {
+    text-decoration: none;
+}

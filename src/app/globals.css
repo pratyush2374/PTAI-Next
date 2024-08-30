@@ -1,33 +1,758 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgba(255, 255, 255, 0.7);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.navbar {
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.7;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.innerNav {
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px 20px;
+  font-weight: 500;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.nameAndIcon {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.nameAndIcon img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nameAndIcon p {
+  margin: 0;
+  font-size: 24px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #007bff;
+  font-weight: 600;
+  transition: 0.2s font-size ease-in;
+
+  &:hover {
+    font-size: 24px;
   }
 }
+
+.login {
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #EEEEEE;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s background-color ease-in;
+}
+
+.login:hover {
+  background-color: #006ee3;
+}
+
+/* Slogan CSS */
+
+.slogan {
+  color: #393E46;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.slogan h1 {
+  font-size: 58px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.slogan p {
+  font-size: 34px;
+  margin: 10px 0 0;
+  font-weight: 500;
+}
+
+.seperator {
+  height: 10px;
+  background-color: #393E46;
+  width: 100vw;
+}
+
+
+.hero1 {
+  background-color: #f4f4f9;
+  /* background-color: rgb(255, 113, 113); */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.bmi {
+  height: auto;
+  width: 80%;
+  background-color: #fff;
+  margin: 30px auto;
+  border-radius: 15px;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bmiInner {
+  margin: 10% auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.calBMI form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.calBMI {
+  width: 50%;
+  max-width: 600px;
+}
+
+.handw {
+  width: 100%;
+  height: 40px;
+  padding-left: 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gender {
+  margin-top: 15px;
+  width: fit-content;
+}
+
+#female,
+#others {
+  margin-left: 5px;
+}
+
+.convertToftandpound {
+  width: fit-content;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.convertToftandpound p {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.genderAndConvert {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.outerBar {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto
+}
+
+.barForBmi {
+  background: rgb(120, 255, 89);
+  background: linear-gradient(90deg, rgba(120, 255, 89, 1) 16%, rgba(245, 99, 99, 1) 70%);
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+
+.userbmi h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* Fitness goals  */
+.fitness-goals {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  color: #fffaf2;
+  background-color: #222831;
+  border-radius: 15px;
+}
+
+.fitness-goals h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.goals-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.goal-item {
+  background-color: #fff;
+  color: #222831;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  max-width: calc(33.33% - 20px);
+  font-weight: 500;
+}
+
+.goal-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #98caff;
+  color: #393E46;
+  font-weight: 600;
+}
+
+.show-plan {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.show-plan:hover {
+  background-color: #393E46;
+  color: #fff;
+  transform: scale(1.05);
+  font-weight: 600;
+}
+
+
+/* -------------------------------- */
+.features {
+  background-color: #222831;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.features-box {
+  background-color: #393E46;
+  border-radius: 15px;
+  padding: 30px;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features-box h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fffaf2;
+  text-align: center;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 30%;
+  max-width: calc(33.333% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.feature-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #666666;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* About Us */
+
+.about-us {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  width: 100vw;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-size: 48px;
+  color: #222831;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Contact Us */
+.contact-us {
+  background-color: #222831;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.contact-form-container {
+  background-color: #393E46;
+  border-radius: 15px;
+  padding: 80px;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-form {
+  width: 60%;
+}
+
+.contact-form h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fffaf2;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-submit {
+  background-color: #00ADB5;
+  color: #fffaf2;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-submit:hover {
+  background-color: #393E46;
+}
+
+.contact-image {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* Footer Section */
+
+.footer {
+  background-color: #222831;
+  color: #EEEEEE;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  margin-right: 10px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fffaf2;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #EEEEEE;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #00ADB5;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fffaf2;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social ul li {
+  margin-bottom: 5px;
+}
+
+.footer-social ul li a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #393E46;
+  padding-top: 10px;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #666666;
+}
+
+.nextLink {
+  text-decoration: none;
+}
+
+
+/* Landing Mobile CSS */
+
+@media (max-width: 768px) {
+  .innerNav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .links a {
+    margin: 10px 0;
+  }
+
+  .nameAndIcon {
+    margin-bottom: 10px;
+  }
+
+  .login {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+
+  .hero1 {
+    padding: 20px;
+  }
+
+  .slogan h1 {
+    font-size: 40px;
+  }
+
+  .slogan p {
+    font-size: 28px;
+  }
+
+  .bmi {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .bmiInner {
+    flex-direction: column;
+  }
+
+  .calBMI {
+    width: 100%;
+    margin: 0;
+  }
+
+  .outerBar {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .fitness-goals {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .goals-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .goal-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .show-plan {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .features {
+    padding: 20px;
+  }
+
+  .features-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .feature-list {
+    flex-direction: column;
+  }
+
+  .feature-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .contact-us {
+    padding: 20px;
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-links,
+  .footer-social {
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul,
+  .footer-social ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-social ul li {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Login CSS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
